@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 71px;
+  align-items: center;
+  max-width: 1280px;
+  border-bottom: 1px solid black;
+  .header__logo {
+    width: 200px;
+    height: 150px;
+  }
+  .header__button {
+    height: 40px;
+    width: 120px ;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+            border-radius: 3em;
+            border-color: black;
+            color: black;
+            background-image: -webkit-linear-gradient(top, transparent 50%, #000000 50%);
+            background-image: linear-gradient(to bottom, transparent 50%, #000000 50%);
+            background-position: 0% 0%;
+            background-size: 210%;
+            -webkit-transition: background 150ms ease-in-out, color 150ms ease-in-out;
+            transition: background 150ms ease-in-out, color 150ms ease-in-out;
+            &:hover{
+              color: #20a6cf;
+              background-position: 0 100%
+            }
+  }
+
+}
