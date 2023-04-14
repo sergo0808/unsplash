@@ -9,5 +9,7 @@ const handleResponse = (res) => {
 };
 
 export const getFotos = () => {
-  return fetch(`${BASE_URL}/random?client_id=${CLIENT_ID}`).then((res) => handleResponse(res));
+  return fetch(`${BASE_URL}/random?client_id=${CLIENT_ID}&count=20`).then((res) =>
+    handleResponse(res)
+  );
 };
