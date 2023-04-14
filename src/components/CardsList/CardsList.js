@@ -2,10 +2,14 @@ import React from "react";
 import "./CardsList.scss";
 import Card from "../Card/Card";
 
-const CardsList = () => {
+const CardsList = ({cards}) => {
   return (
     <section className="CardsList">
-      <Card />
+      {cards.map((card) =>{
+        <Card />
+
+      })}
+      
     </section>
   );
 };

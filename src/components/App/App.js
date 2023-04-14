@@ -6,13 +6,20 @@ import { useState } from "react";
 import * as Fotos from "../../utils/Api";
 
 function App() {
-  const [card, setCard] = useState([]);
-  Fotos.getFotos().then((data) => {});
+  const [cards, setCards] = useState([]); 
+
+  const handleClick = () => {
+    Fotos.getFotos().then((data) => {setCards(data)});
+    console.log(cards)
+
+  }
+
+
 
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Header onClick ={handleClick}/>
+      <Main cards={cards}/>
       <Footer />
     </div>
   );
