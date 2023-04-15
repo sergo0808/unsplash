@@ -13,3 +13,9 @@ export const getFotos = () => {
     handleResponse(res)
   );
 };
+
+export const changeLikeCardStatus = (id, isLiked) => {
+  return fetch(`${BASE_URL}/cards/` + id + "/likes", {
+    method: isLiked ? "PUT" : "DELETE",
+  }).then(this._handleResponse);
+};
